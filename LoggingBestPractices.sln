@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBestPractices.Benchm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBestPractices.MemoryProfiling", "LoggingBestPractices.MemoryProfiling\LoggingBestPractices.MemoryProfiling.csproj", "{95D3916D-D9F2-40DB-AD37-0805132E670E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBestPractices.SeriLog", "LoggingBestPractices.SeriLog\LoggingBestPractices.SeriLog.csproj", "{9B234B71-2C02-4BE6-83EA-72FAF0D4E72F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{95D3916D-D9F2-40DB-AD37-0805132E670E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D3916D-D9F2-40DB-AD37-0805132E670E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D3916D-D9F2-40DB-AD37-0805132E670E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B234B71-2C02-4BE6-83EA-72FAF0D4E72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B234B71-2C02-4BE6-83EA-72FAF0D4E72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B234B71-2C02-4BE6-83EA-72FAF0D4E72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B234B71-2C02-4BE6-83EA-72FAF0D4E72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
