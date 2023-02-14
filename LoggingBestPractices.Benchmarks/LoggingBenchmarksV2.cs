@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using LoggingBestPractices.Benchmarks.Loggers;
 using Microsoft.Extensions.Logging;
 
 namespace LoggingBestPractices.Benchmarks;
@@ -10,7 +11,7 @@ public class LoggingBenchmarksV2
 
     private readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder =>
     {
-        builder.AddConsole().SetMinimumLevel(LogLevel.Warning);
+        builder.AddFakeLogger().SetMinimumLevel(LogLevel.Information);
     });
 
     private readonly ILogger<LoggingBenchmarksV2> _logger;
