@@ -39,14 +39,20 @@ public class LoggingBenchmarksV3
     }
 
     [Benchmark]
-    public void LogAdapter_Without_WithParams()
+    public void LogAdapter_WithoutIf_WithParams()
     {
         _loggerAdapter.LogInformation(LogMessageWithParameters, 69, 420);
     }
     
     [Benchmark]
-    public void LoggerMessageDef_Without_WithParams()
+    public void LoggerMessageDef_WithoutIf_WithParams()
     {
         _logger.LogBenchmarkMessage(69, 420);
+    }
+    
+    [Benchmark]
+    public void LoggerMessageDef_SourceGen_WithoutIf_WithParams()
+    {
+        _logger.LogBenchmarkMessageGen(69, 420);
     }
 }
