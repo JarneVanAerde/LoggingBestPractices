@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using LoggingBestPractices.Benchmarks;
 
-BenchmarkRunner.Run<LoggingBenchmarksV2>();
+BenchmarkRunner.Run<LoggingBenchmarksV3>();

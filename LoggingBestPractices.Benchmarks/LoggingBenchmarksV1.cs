@@ -6,7 +6,7 @@ namespace LoggingBestPractices.Benchmarks;
 [MemoryDiagnoser]
 public class LoggingBenchmarksV1
 {
-    private const string LogMessageWithParameters = "This is a log message with parameters {0}, {1}";
+    private const string LogMessageWithParameters = "This is a log message with parameters {First}, {Second}";
     private const string LogMessage = "This is a log message";
 
     private readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder =>

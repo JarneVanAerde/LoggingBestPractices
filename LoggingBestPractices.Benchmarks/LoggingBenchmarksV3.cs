@@ -5,22 +5,22 @@ using Microsoft.Extensions.Logging;
 namespace LoggingBestPractices.Benchmarks;
 
 [MemoryDiagnoser]
-public class LoggingBenchmarksV2
+public class LoggingBenchmarksV3
 {
     private const string LogMessageWithParameters = "This is a log message with parameters {First}, {Second}";
 
     private readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder =>
     {
-        builder.AddConsole().SetMinimumLevel(LogLevel.Information);
+        builder.AddFakeLogger().SetMinimumLevel(LogLevel.Information);
     });
 
-    private readonly ILogger<LoggingBenchmarksV2> _logger;
-    private readonly LoggerAdapter<LoggingBenchmarksV2> _loggerAdapter;
+    private readonly ILogger<LoggingBenchmarksV3> _logger;
+    private readonly LoggerAdapter<LoggingBenchmarksV3> _loggerAdapter;
 
-    public LoggingBenchmarksV2()
+    public LoggingBenchmarksV3()
     {
-        _logger = new Logger<LoggingBenchmarksV2>(_loggerFactory);
-        _loggerAdapter = new LoggerAdapter<LoggingBenchmarksV2>(_logger);
+        _logger = new Logger<LoggingBenchmarksV3>(_loggerFactory);
+        _loggerAdapter = new LoggerAdapter<LoggingBenchmarksV3>(_logger);
     }
 
     [Benchmark]
@@ -39,8 +39,14 @@ public class LoggingBenchmarksV2
     }
 
     [Benchmark]
-    public void LogAdapter_WithIf_WithParams()
+    public void LogAdapter_Without_WithParams()
     {
         _loggerAdapter.LogInformation(LogMessageWithParameters, 69, 420);
+    }
+    
+    [Benchmark]
+    public void LoggerMessageDef_Without_WithParams()
+    {
+        _logger.LogBenchmarkMessage(69, 420);
     }
 }
