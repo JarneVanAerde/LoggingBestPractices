@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 namespace LoggingBestPractices.Benchmarks;
 
 [MemoryDiagnoser]
-public class LoggingBenchmarks
+public class LoggingBenchmarksV1
 {
     private const string LogMessageWithParameters = "This is a log message with parameters {0}, {1}";
     private const string LogMessage = "This is a log message";
@@ -14,11 +14,11 @@ public class LoggingBenchmarks
         builder.AddConsole().SetMinimumLevel(LogLevel.Warning);
     });
 
-    private readonly ILogger<LoggingBenchmarks> _logger;
+    private readonly ILogger<LoggingBenchmarksV1> _logger;
 
-    public LoggingBenchmarks()
+    public LoggingBenchmarksV1()
     {
-        _logger = new Logger<LoggingBenchmarks>(_loggerFactory);
+        _logger = new Logger<LoggingBenchmarksV1>(_loggerFactory);
     }
 
     [Benchmark]

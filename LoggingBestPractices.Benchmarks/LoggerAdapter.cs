@@ -2,7 +2,7 @@
 
 namespace LoggingBestPractices.Benchmarks;
 
-public class LoggerAdapter<T> : ILoggerAdapter<T>
+public class LoggerAdapter<T> : ILoggerAdapter
 {
     private readonly ILogger<T> _logger;
 
@@ -44,7 +44,7 @@ public class LoggerAdapter<T> : ILoggerAdapter<T>
     }
 }
 
-public interface ILoggerAdapter<T>
+public interface ILoggerAdapter
 {
     void LogInformation(string message);
     void LogInformation<T0>(string message, T0 arg0);
