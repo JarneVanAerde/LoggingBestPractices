@@ -11,7 +11,7 @@ public class LoggingBenchmarksV2
 
     private readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder =>
     {
-        builder.AddConsole().SetMinimumLevel(LogLevel.Information);
+        builder.AddConsole().SetMinimumLevel(LogLevel.Warning);
     });
 
     private readonly ILogger<LoggingBenchmarksV2> _logger;
