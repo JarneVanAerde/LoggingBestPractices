@@ -7,16 +7,7 @@ var loggerFactory = LoggerFactory.Create(builder =>
 
 ILogger logger = new Logger<Program>(loggerFactory);
 
-for (var i = 0; i < 100_000_000; i++)
+for (var i = 0; i < 42_000_000; i++)
 {
     logger.LogInformation("Random number {RandomNumber}", Random.Shared.Next());
-    
-    // This is better
-    // if (logger.IsEnabled(LogLevel.Information))
-    // {
-    //     logger.LogInformation("Random number {RandomNumber}", Random.Shared.Next());
-    // }
-    
-    // this is even worse!
-    //logger.LogInformation($"Random number {Random.Shared.Next()}");
 }

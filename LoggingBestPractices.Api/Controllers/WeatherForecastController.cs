@@ -20,12 +20,8 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "weather")]
     public IEnumerable<WeatherForecast> Get([FromQuery] int days = 5)
     {
-        if (_logger.IsEnabled(LogLevel.Debug))
-        {
-            // Value types need to be boxed to be put in an object array
-            // Arrays are also placed on the heap.
-            _logger.LogDebug("Retrieving weather forecast for {Days} days", days);
-        }
+        _logger.LogInformation("Retrieving weather forecast for {Days} days", days);
+        
         return Enumerable.Range(1, days).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

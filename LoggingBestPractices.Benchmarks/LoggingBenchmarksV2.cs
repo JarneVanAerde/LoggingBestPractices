@@ -34,7 +34,7 @@ public class LoggingBenchmarksV2
     {
         if (_logger.IsEnabled(LogLevel.Information))
         {
-            _loggerAdapter.LogInformation(LogMessageWithParameters, 69, 420);
+            _logger.LogInformation(LogMessageWithParameters, 69, 420);
         }
     }
 

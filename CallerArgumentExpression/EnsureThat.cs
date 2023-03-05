@@ -12,12 +12,11 @@ public static class EnsureThat
         }
     }
     
-    public static void ItIsNotEmpty<T>(IEnumerable<T> value,
-        [CallerArgumentExpression("value")] string message = "")
+    public static void ItIsNotEmpty<T>(IEnumerable<T> value)
     {
         if (!value.Any())
         {
-            throw new ArgumentException("Enumerable is empty", message);
+            throw new ArgumentException("Enumerable is empty", nameof(value));
         }
     }
     
