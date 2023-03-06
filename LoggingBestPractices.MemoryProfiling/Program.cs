@@ -7,7 +7,7 @@ var loggerFactory = LoggerFactory.Create(builder =>
 
 ILogger logger = new Logger<Program>(loggerFactory);
 
-for (var i = 0; i < 42_000_000; i++)
+for (var i = 0; i < 75_000_000; i++)
 {
     logger.LogInformation("Random number {RandomNumber}", Random.Shared.Next());
 }
