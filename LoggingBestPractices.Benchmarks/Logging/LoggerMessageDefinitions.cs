@@ -14,6 +14,41 @@ public static class LoggerMessageDefinitions
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public static partial class LoggerMessageDefinitionsGen
 {
     [LoggerMessage(EventId = 0, Level = LogLevel.Information,
